@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+     <title>{{ title }}</title>
+     <script type="text/javascript">
+     function tanya()
+       {
+         var tanya=confirm("Apakah anda ingin menghapus data ini ?")
+         if (tanya)
+           {
+             return true
+           }
+         else
+           {
+             return false
+           }   
+       }
+     </script>
+  </head>
+  <body>  
+    <div>
+     <a href="{{ url_for('index') }}">Home</a>
+     <a href="{{ url_for('frm_entry') }}">Entri Data</a>
+     <a href="{{ url_for('tampil_data') }}">Tampil Data</a>
+   </div>
+   <div>
+   {% block content %}{% endblock %}
+  </body>
+</html>   
+  
